@@ -1,435 +1,975 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-    <!-- 
-    More Templates Visit ==> ProBootstrap.com
-    Free Template by Bootstrap.com under the License Creative Commons 3.0 ==> (probootstrap.com/license)
-    IMPORTANT: You can do whatever you want with this template but you need to keep the footer link back to ProBootstrap.com
-    -->
-		<meta charset="utf-5">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Recupere sus salarios y honorarios si una entidad pública de salud le adeuda. Representación judicial especializada para médicos y profesionales de la salud en Colombia." />
+  <meta name="keywords" content="abogados laborales Colombia, médicos acreencias hospitales, honorarios no pagados, Arbeláez Ruiz Abogados" />
+  <title>Arbeláez Ruiz Abogados — Recupere lo que le deben</title>
 
-		<title>AR &mdash; Arbelaez Ruiz Abogados COL</title>
-		<meta name="description" content="AR abogados">
-		<meta name="keywords" content="Colombia, Bogota, Ibague, firmas, Abogados, Arbelaez Ruiz">
-    
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/law-icons/font/flaticon.css">
+  <style>
+    :root {
+      --navy:      #1B2A4A;
+      --navy-deep: #111D33;
+      --gold:      #C9A84C;
+      --blue-acc:  #378ADD;
+      --cream:     #F5F2EC;
+      --white:     #FFFFFF;
+      --text-dark: #1B2A4A;
+      --text-mid:  #4A4A4A;
+      --text-light:#8A8A8A;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Montserrat', Arial, sans-serif;
+      --max-w: 900px;
+      --pad-x: clamp(1.25rem, 5vw, 3rem);
+    }
 
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
-    
-    
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
 
-    <link rel="stylesheet" href="assets/css/helpers.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-	</head>
-	<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
-    
-    <nav class="navbar navbar-expand-md navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-	      <img src="assets/images/logo abogado navbar.png" width="127" height="40" class="d-none d-lg-block d-xl-block align-top" alt="arbelaez ruiz abogados">
-	      </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span><i class="ion-navicon"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="probootstrap-navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#section-home"><p class="text-primary">Inicio</p></a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-about"><p class="text-primary ml-1">Nosotros</p></a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-why-us"><p class="text-primary ml-1">Servicios</p></a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-testimonials"><p class="text-primary ml-1">Testimonios</p></a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-contact"><p class="text-primary ml-1">Contacto</p></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- END nav -->
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x); }
 
-  <section class="pb_cover_v1 text-left cover-bg-transparent" style="background-image: url(assets/images/Background2.jpg)" id="section-home">
-      <div class="container">
-        <div class="row align-items-center justify-content-end">
-          <div class="col-md-5  order-md-1">
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 2.5rem;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
 
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-title.light { color: var(--white); }
+    .section-title.light em { color: var(--gold); }
 
-            
-          </div>  
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-    
-    
-    <section class="pb_section pb_section_v1" data-section="about" id="section-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 pr-md-5 pr-sm-0">
-            <h2 class="mt-0 heading-border-top mb-3 font-weight-normal">NOSOTROS</h2>
-            <p class="text-justify">El ejercicio del derecho, al ser nuestra mayor pasión, nos ha permitido  formar un amplio criterio jurídico, el que empleamos de manera propositiva y oportuna en la búsqueda constante de obtener la resolución favorable de nuestros casos. Nuestra experiencia en diversas áreas del derecho, nos ha abonado el crecimiento profesional necesario para lograr resultados exitosos.</p>
-            <p class="text-justify">El liderazgo y los valores humanísticos que practicamos son parte esencial de nuestra labor, tenemos una alta percepción de la responsabilidad, somos comprometidos con lo que hacemos,. Creemos que es muy importante cumplir con la función social propia de los abogados, hacer del derecho una práctica justa basada en la equidad.</p>
-          </div>
-          <div class="col-lg-7">
-            <div class="images">
-		    <div class="center-block"></div>
-              <img class="img1 img-fluid" src="assets/images/iustitia.jpg" alt="iustitia">
-            </div>
-          </div>
-          
-        </div>
-	<div id="box" align="center"><a href="https://www.abogados.com.co/bufetes/arbelaez-ruiz-abogados" target="_blank" ><img src="https://www.abogados.com.co/stamp.xpng?com=378907&v=10" alt="ARBELÁEZ RUIZ ABOGADOS" border="0" /></a></div>
-      </div>  
-    </section>
-    <!-- END section -->
+    .body-text { font-size: 1rem; color: var(--text-mid); max-width: 680px; line-height: 1.8; }
+    .body-text.light { color: rgba(255,255,255,0.82); }
 
-    
-    <section class="pb_section bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md">
-            <div class="media pb_media_v2 d-block text-center  mb-3">
-              <div class="media-body">
-                <h3 class="mt-0 pb_font-20">Queremos servirte.</h3>
-		      <h3 class="mt-2 pb_font-20">Contáctanos</h3>
-		      <p> </p>
-		      <p> </p>
-		      <img src="assets/images/wa.png" alt="walogo" class="center">
-                <p><a href="https://wa.link/zu7np1">Whatsapp directo +573004558416</a></p>
-		      <p> </p>
-		      <img src="assets/images/gmail.png" alt="logogmail" class="center">
-			<p><a href="mailto:arbelaezruizabogados@gmail.com">arbelaezruizabogados@gmail.com</a></p>
-		           <p> </p>
-		            <img src="assets/images/ig.png" alt="iglogo" class="center">
-		           <p><a href="https://www.instagram.com/arbelaezruizabogados/">Instagram @arbelaezruizabogados</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-      
-    <!-- END section -->
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      border: none;
+      white-space: nowrap;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-gold { background: var(--gold); color: var(--navy-deep); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 0.85rem 1.75rem;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
 
-    <section class="pb_section" data-section="why-us" id="section-why-us">
-      <div class="container">
-        <div class="row justify-content-md-center text-center mb-5">
-          <div class="col-lg-7">
-            <h2 class="mt-0 heading-border-top font-weight-normal">SERVICIOS</h2>
-	    <p </p>
-            <p class="text-justify">Como asesores legales gestionamos todas las instancias en cada caso que nos es confiado, establecemos estrategias jurídicas enfocadas a la obtención de resultados favorables, iniciando por el agotamiento de etapas prejudiciales mediante el diseño y proposición de diversos métodos alternativos de solución de conflictos, como la conciliación.</p>
-            <p class="text-justify">Representamos judicialmente a nuestros clientes en distintas jurisdicciones, con la premisa de prestar un servicio justo y de calidad. Establecemos las distintas rutas legales posibles bajo un criterio multidisciplinario y una visión amplia del ordenamiento jurídico. Nuestro campo de acción se enfoca principalmente en las siguientes áreas del derecho: </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="images right">
-              <img class="img1 img-fluid" src="assets/images/despacho.jpg" alt="despacho">
-            </div>
-          </div>
-          <div class="col-lg-5 pl-md-5 pl-sm-0">
-            <div id="exampleAccordion" class="pb_accordion" data-children=".item">
-              <div class="item">
-                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="false" aria-controls="exampleAccordion1" class="pb_font-16">DERECHO LABORAL INDIVIDUAL</a>
-                <div id="exampleAccordion1" class="collapse" role="tabpanel">
-                  <p class="text-justify">Permite a un abogado experto hacerse cargo. Diseñamos una estrategia jurídica para agotar  las instancias procesales adecuadamente y exigir las acreencias laborales que te son debidas por entidades públicas o privadas. En caso de terminación o suspensión del contrato sin justa causa,  salarios y prestaciones incumplidas, elaboración y revisión de liquidación laboral, contratos laborales indebidamente pactados bajo la modalidad de prestación de servicios, desmejora  de las condiciones de trabajo entre otros supuestos de hecho. No pierdas tus derechos esperando indefinidamente, pueden corresponderte indemnizaciones, intereses moratorios, reliquidaciones, retroactivos y hasta indexación de estos valores.</p>
-			
-                </div>
-              </div>
-              <div class="item">
-                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2" class="pb_font-16">DERECHO CIVIL </a>
-                <div id="exampleAccordion2" class="collapse" role="tabpanel">
-                  <p class="text-justify">En el área del derecho civil te prestamos diversos servicios jurídicos. Derecho de familia; Sucesiones notariales y judiciales, testamentos, fiducia o fideicomiso civil. Asesoría legal en la realización de acuerdos de régimen de visitas y alimentos del menor o representación en proceso judicial. Divorcios, liquidación y disolución de sociedad  conyugal o patrimonial. </p>
-                  <p class="text-justify">Te asesoramos en la correcta aplicación del régimen legal de los bienes; arrendamiento de vivienda urbana, contrato de promesa y de compraventa  de bienes inmuebles y muebles, constitución y levantamiento de garantías reales como prenda e hipoteca y su defensa judicial en procesos ejecutivos, estudio de títulos, pertenencia por posesión, restitución de inmueble arrendado por incumplimiento.</p>
-		  <p class="text-justify">Abarcamos el derecho civil de las obligaciones y contratos; responsabilidad civil contractual, hechura de contratos civiles y mercantiles, depósito, fianza, comodato, fiducia, mandato, mutuo, eximentes de responsabilidad civil.</p>	
-                </div>
-              </div>
-              <div class="item">
-                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion3" aria-expanded="false" aria-controls="exampleAccordion3" class="pb_font-16">DERECHO PENAL TRIBUTARIO</a>
-                <div id="exampleAccordion3" class="collapse" role="tabpanel">
-                 <p class="text-justify">Si requieres servicios jurídicos por haberte visto involucrado en delitos tributarios o requerimientos por parte de las autoridades tributarias, te podemos ayudar, buscaremos la mejor estrategia aprovechando asertivamente todas las vías posibles para plantear tu defensa penal o prestarte la asesoraría o representación que requieras.</p>
-                  <p class="text-justify">La responsabilidad penal a la que se pueden enfrentar empresarios, miembros de juntas directivas, representantes legales, contadores y hasta accionistas de una persona jurídica al no pagar sus impuestos, u omitir cumplir deberes consignados en la normatividad tributaria es un tema de importancia mayúscula, más aun cuando las nuevas reformas en esta materia apuntan a darle un mayor alcance penal,  buscando la sanción punitiva del contribuyente que  por diversas razones se sustrae del pago de sus obligaciones tributarias. La normatividad vigente ya incluye los delitos de omisión de activos o inclusión de pasivos inexistentes, defraudación o evasión tributaria y omisión de agente retenedor o recaudador, tipos penales que conforman el derecho penal tributario y cuyos entes persecutores son la Dirección de impuestos y aduanas nacionales DIAN y  la Fiscalía general de la nación, y cuyas penas van hasta 108 meses de prisión y multas de hasta 8.500 salarios mínimos mensuales legales vigentes.</p>
-                </div>
-              </div>
-              <div class="item">
-                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion4" aria-expanded="false" aria-controls="exampleAccordion4" class="pb_font-16">DERECHO DEL CONSUMIDOR</a>
-                <div id="exampleAccordion4" class="collapse" role="tabpanel">
-                  <p class="text-justify">Tiene como propósito principal, garantizar que los ciudadanos gocen de una efectiva protección como consumidores de bienes y servicios, al ser parte de la cadena de valor del mercado y estando en el último eslabón de está como destinatarios finales, dicha relación de consumo genera múltiples disputas entre los distintos actores del mercado, tanto vendedores como compradores o usuarios pueden verse afectados. Es nutrida la lista de prácticas indebidas que diariamente se ejecutan; incumplimiento de garantías y beneficios ofrecidos, baja calidad, idoneidad y seguridad de productos o fallas constantes en los servicios contratados, retracto de compras, fraudes bancarios, solo por mencionar algunos supuestos que están a la orden del día en todos los sectores económicos; financiero, inmobiliario, telecomunicaciones, tecnología, automotriz, son los que destacan. Por fortuna, existen distintos medios de defensa y salvaguarda de estos derechos, la superintendencia de industria y comercio en su facultad jurisdiccional y jueces civiles deciden sobre estas contiendas y reivindican los derechos de los consumidores dándoles seguridad jurídica.</p>
-                  <p class="text-justify">Alléganos tu consulta, iniciamos la acción pertinente; Reclamo o defensa directa ante el productor o proveedor del servicio o producto, o ante el consumidor, representación judicial, protección al consumidor financiero, de telecomunicaciones, consumidor digital, consumidor a distancia y tradicional de diversos bienes y servicios</p>                </div>
-              </div>
-            </div>
+    /* WhatsApp flotante */
+    .wa-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      width: 3.25rem;
+      height: 3.25rem;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      transition: transform 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 1.75rem; height: 1.75rem; fill: #fff; }
 
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-    
-    <section class="pb_section">
-      <div class="multiple-items pb_slide_v1">
-        <div>
-          <a class="link-block">
-            <img src="assets/images/pacta su ser vandapro.jpg" alt="pacta sunt ser vanda" class="img-fluid">
-            <div class="slide-text">
-            </div>
-          </a>
-        </div>
-        <div>
-          <a class="link-block">
-            <img src="assets/images/derecho laboral.jpg" alt="derecho laboral" class="img-fluid">
-            <div class="slide-text">
-            </div>
-          </a>
-        </div>
-        <div>
-          <a  class="link-block">
-            <img src="assets/images/derecho civil.jpg" alt="derecho civil" class="img-fluid">
-          </a>
-        </div>
-        <div>
-          <a  class="link-block">
-            <img src="assets/images/derecho penal.jpg" alt="derecho penal tributario" class="img-fluid">
-            <div class="slide-text">
-            </div>
-          </a>
-        </div>
-        <div>
-          <a  class="link-block">
-            <img src="assets/images/derecho del consumidor.jpg" alt="derecho civil" class="img-fluid">
-            <div class="slide-text">
-            </div>
-          </a>
-        </div>
-      </div>
+    /* =============================================
+       NAVBAR
+    ============================================= */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(17, 29, 51, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem var(--pad-x);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-    </section>
-    <!-- END section -->
-		 <section class="pb_section pb_testimonial_v1" data-section="testimonials" id="section-testimonials">	
-      <div class="container">	
-        <div class="row justify-content-md-center text-center mb-0">	
-          <div class="col-lg-7">	
-            <h2 class="mt-0 heading-border-top font-weight-normal">NUESTROS CLIENTES NOS RECOMIENDAN</h2>	
-            <p>Estos son algunos de sus testimonios:</p>	
-          </div>	
-        </div>	
-        <div class="row justify-content-md-center">	
-          <div class="col-md-8 col-sm-8 mb-3">	
-    <div class="container">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="media">	
-                <div class="media-body pl-md-5 pl-sm-0">	
-                  <blockquote>	
-                    <p>&ldquo;Mi nombre es Stella Gutierrez, hace algunos meses decidí retirarme de la empresa para la cual laboraba, ya que me adeudaban mucho dinero de salarios, prestaciones de ley y otras cosas,proceso que sabía sería muy difícil ya que dicha empresa ya presentaba inconvenientes de demandas por parte de otros empleados, solicité asesoría de Arbeláez Ruiz abogados para no perder mi dinero, con sus conocimientos y experiencia fui guiada de la mejor manera y logré que en el menor tiempo posible, dicha empresa acordara el pago de lo que me adeudaban y créanme eso lo veía tan difícil, pero así como se los he repetido en varias ocasiones doy gracias a Dios por su colaboración y conocimientos ya que logramos lo que para mí era imposible.&rdquo;</p>	
-                    <p class="text-muted pb-0"><em>STELLA GUTIERREZ.</em></p>
-              <p class="text-muted pt-0"><li class="list-inline-item"><a href="https://www.instagram.com/sthellagutierrez/?hl=es-la" class="p-0"><i class="fa fa-instagram"></i></a></li><em>@sthellagutierrez</em></p>
-                  </blockquote>	
-                </div>	
-              </div>	
-          </div>
-          <div class="carousel-item">
-            <div class="media">		
-                <div class="media-body pl-md-5 pl-sm-0">	
-                   <blockquote>	 
-                    <p>Otros profesionales no se preocupan ni ocupan como debe ser del proceso, eso me sucedió con una abogada amiga de la familia, me sentí desprotegido porque en la audiencia la profesional poco me defendió, a pesar de tener lo necesario para que me reconocieran mis derechos como padre y los de mí hijo. Siendo un buen padre y con la representación de Arbeláez Ruiz abogados fue totalmente diferente, el abogado tomó posesión de mis derechos y logramos obtener lo que como padre me correspondía , por eso los he recomendado y han sido igual de efectivos, les agradezco lo que conseguimos eso solo se obtiene con profesionales que entienden el significado de defender los derechos de las personas.</p>	
-                    <p class="text-muted pb-0"><em>HERNAN PULIDO.</em></p>
-              <p class="text-muted pt-0"><li class="list-inline-item"><a href="https://www.facebook.com/hernan.pulido.52" class="p-0"><i class="fa fa-facebook"></i></a></li><em>@hernan.pulido.52</em></p>
-                  </blockquote>	
-                </div>	
-              </div>	
-          </div>
-          <div class="carousel-item">
-            <div class="media">
-                <div class="media-body pl-md-5 pl-sm-0">	
-                  <blockquote>	
-                    <p>Han llevado mi proceso de lesiones personales desde el año 2018. Anteriormente  el agresor estaba haciendo todo lo posible para dilatarlo, logaron suscribir un abogado de confianza que no asistía a las diligencias  casi cumpliéndose el tiempo de vencimiento de términos, frente  a esto el asesor que tenía antes no pudo hacer mucho, en el 2018 decidí contactar Arbelaez Ruiz abogados confiriéndoles el poder sobre el caso y desde ese momento se destrabó el proceso ya que se promovió la contumacia y la contraparte compareció avanzando hasta la etapa de juzgamiento.  Adicionalmente a estos resultados resaltó la buena atención, el profesional es claro y directo con el proceso, colaborador, escucha y sabe guiar. Excelente servicio.</p>	
-                    <p class="text-muted pb-0"><em>DIEGO BERNAL.</em></p>
-              <p class="text-muted pt-0"><li class="list-inline-item"><a href="https://www.facebook.com/diego.bernal.104" class="p-0"><i class="fa fa-facebook"></i></a></li><em>@diego.bernal.104</em></p>
-                  </blockquote>	
-                </div>	
-              </div>	
-          </div>
-          <div class="carousel-item">
-            <div class="media">
-                <div class="media-body pl-md-5 pl-sm-0">	
-                  <blockquote>	
-                    <p>Mi nombre es Mario Cajiao vivo en Bogotá. Con el presente escrito me permito expresar mi total agradecimiento y admiración por Arbeláez Ruiz abogados pues asumieron mi defensa en el caso ya iniciado y con injusta y desproporcionada sentencia condenatoria de 56 meses en prisión intramural a pesar de mi edad de 75 años. Interponiendo el recurso sobre la primera instancia se solicitó incluir dentro del proceso, documentos probatorios que habían sido inadmitidos por el Juez irrazonablemente. El tribunal ordenó retomar el proceso con los nuevos elementos. Sin embargo, en esta instancia, el Juez se ratificó en la sentencia reduciéndola solo 4 meses y trasladándola a domiciliaria. Ahora, con todos los documentos ya añadidos al proceso, mi representante sustentó la apelación y en segunda instancia fui declarado no responsable del delito tributario imputado. Se ordenó el archivo definitivo del expediente. Se manejó el asunto con la sabiduría, madurez y ecuanimidad de un profesional del derecho con varios años de ejercicio en esta disciplina. Auguro un excelente futuro al bufete</p>	
-                    <p class="text-muted pb-0"><em>MARIO CAJIAO.</em></p>
-              <p class="text-muted pt-0"><li class="list-inline-item"><a href="https://www.facebook.com/mario.cajiao.9" class="p-0"><i class="fa fa-facebook"></i></a></li><em>@mario.cajiao.9</em></p>
-                  </blockquote>	
-                </div>	
-              </div>
-          </div>
-          <div class="carousel-item">
-            <div class="media">		
-                <div class="media-body pl-md-5 pl-sm-0">	
-                   <blockquote>	 
-                    <p>Mi nombre es Julián S. Vásquez, soy representante legal de la empresa DELVAS ENERGY SAS, recientemente nuestra compañía requirió servicios jurídicos por un asunto laboral; ARBELAEZ RUIZ ABOGADOS fue el despacho que asumió nuestra defensa, de la cual estamos muy agradecidos, tuvieron profesionalismo, disciplina y orden. El fallo judicial salió adelante a favor de nosotros, gracias a su trabajo y su oportuna intervención no tuvimos que asumir el pago de la suma que injustamente se nos pedía y así lo logramos demostrar.</p>	
-                    <p class="text-muted pb-0"><em>JULIAN S.VÁSQUEZ.</em></p>
-                    <p class="text-muted pt-0"><li class="list-inline-item"><a href="https://www.facebook.com/julian.vasquez.1612" class="p-0"><i class="fa fa-facebook"></i></a></li><em>@julian.vasquez.1612</em></p>
-                  </blockquote>	
-                </div>	
-              </div>	
-          </div>
-           <div class="carousel-item">
-            <div class="media">		
-                <div class="media-body pl-md-5 pl-sm-0">	
-                   <blockquote>	 
-                    <p>Mi nombre es Fernando Machado, represento legalmente a la empresa GREDS S.A.S, hemos contratado los servicios jurídicos de ARBELAEZ RUIZ ABOGADOS para que se nos prestara asesoría en la celebración de distintos acuerdos comerciales con clientes y proveedores. La atención que recibimos fue muy buena, nos fueron diseñados contratos comerciales de manera meticulosa y clara, teniendo en cuenta cada una de nuestras necesidades y posibles riesgos legales, su trabajo nos permitió tener un blindaje jurídico ideal para garantizar el cumplimiento de las obligaciones en nuestros negocios, por esta razón y por su profesionalismo agradezco en nombre de nuestra compañía, seguiremos trabajando juntos.</p>	
-                    <p class="text-muted pb-0"><em>FERNANDO MACHADO.</em></p>
-                    <p class="text-muted pt-0"><li class="list-inline-item"><a href="https://www.facebook.com/fernando.machado.u" class="p-0"><i class="fa fa-facebook"></i></a></li><em>@fernando.machado.u</em></p>
-                  </blockquote>	
-                </div>	
-              </div>	
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon bg-primary mr-5" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon bg-primary ml-5" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-        </div>
+    /* Logo animado en navbar */
+    .navbar-logo-video {
+      height: 3.2rem;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
 
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .navbar-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    .navbar-link:hover { color: var(--gold); }
+    .navbar-link.active { color: var(--gold); }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    .hero {
+      background: var(--navy-deep);
+      padding: 8rem var(--pad-x) 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 120px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60 Q360 0 720 60 Q1080 120 1440 60 L1440 120 L0 120Z' fill='%23F5F2EC'/%3E%3C/svg%3E") no-repeat bottom/cover;
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      max-width: 740px;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .hero-sub strong { color: var(--white); }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* =============================================
+       SECCIÓN: PROBLEMA
+    ============================================= */
+    .section-problema { background: var(--cream); padding: 5rem var(--pad-x); }
+    .quote-block {
+      background: var(--navy);
+      border-radius: 4px;
+      padding: 2.5rem 3rem;
+      margin: 3rem 0;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '\201C';
+      font-family: var(--serif);
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: 0.4;
+      position: absolute;
+      top: 0.5rem; left: 1.5rem;
+      line-height: 1;
+    }
+    .quote-block p {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .quote-block p em { color: var(--gold); }
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(27,42,74,0.1);
+      border-radius: 4px;
+      padding: 1.75rem 1.5rem;
+    }
+    .card-num { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--gold); margin-bottom: 0.75rem; }
+    .card h3 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.6rem; }
+    .card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+
+    /* =============================================
+       SECCIÓN: VIDEO
+    ============================================= */
+    .section-video { background: var(--navy-deep); padding: 5rem var(--pad-x); text-align: center; }
+    .video-wrapper {
+      max-width: 720px;
+      margin: 2rem auto 0;
+      border-radius: 4px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.85rem;
+    }
+    .video-placeholder-icon {
+      width: 4rem; height: 4rem;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-placeholder-icon svg { width: 1.5rem; height: 1.5rem; fill: rgba(255,255,255,0.3); margin-left: 4px; }
+
+    /* =============================================
+       SECCIÓN: NOSOTROS
+    ============================================= */
+    .section-nosotros { background: var(--navy); padding: 5rem var(--pad-x); }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+    }
+    .stat-num { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+    .stat-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 0.5rem; }
+    .stat-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .cobertura-block {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .cobertura-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .cobertura-title { font-family: var(--serif); font-size: 2.2rem; color: var(--white); }
+    .cobertura-text { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; flex: 1; min-width: 220px; }
+    .cobertura-text strong { color: var(--white); }
+    .inversion-block {
+      background: rgba(255,255,255,0.04);
+      border-left: 3px solid var(--gold);
+      padding: 2rem 2.5rem;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .inversion-title { font-family: var(--serif); font-size: 1.8rem; font-style: italic; color: var(--white); min-width: 200px; line-height: 1.3; }
+    .inversion-text { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; flex: 1; min-width: 220px; }
+    .inversion-text strong { color: var(--white); }
+
+    /* =============================================
+       SECCIÓN: TESTIMONIOS
+    ============================================= */
+    .section-testimonios { background: var(--cream); padding: 5rem var(--pad-x); }
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .testimonio-card {
+      background: var(--white);
+      border: 1px solid rgba(27,42,74,0.08);
+      border-radius: 4px;
+      padding: 2rem;
+      position: relative;
+    }
+    .testimonio-card::before {
+      content: '\201C';
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      color: var(--gold);
+      opacity: 0.25;
+      position: absolute;
+      top: 0.5rem; left: 1rem;
+      line-height: 1;
+    }
+    .testimonio-text { font-family: var(--serif); font-size: 0.98rem; font-style: italic; color: var(--text-mid); line-height: 1.7; margin-bottom: 1.25rem; padding-top: 1rem; }
+    .testimonio-author { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
+    .testimonio-handle { font-size: 0.72rem; color: var(--text-light); margin-top: 0.2rem; }
+
+    /* =============================================
+       SECCIÓN: SIGUIENTE PASO
+    ============================================= */
+    .section-paso { background: var(--cream); padding: 5rem var(--pad-x); border-top: 1px solid rgba(27,42,74,0.08); }
+    .paso-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+    .pasos-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .paso-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .paso-num {
+      width: 2rem; height: 2rem;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .paso-content h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.3rem; }
+    .paso-content p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+    .cta-card { background: var(--navy); border-radius: 4px; padding: 2.5rem 2rem; text-align: center; }
+    .cta-card-eyebrow { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .cta-card-title { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--white); margin-bottom: 0.5rem; }
+    .cta-card-phone { font-family: var(--serif); font-size: 2.2rem; color: var(--white); margin: 1rem 0; line-height: 1; }
+    .cta-card-sub { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-bottom: 1.75rem; line-height: 1.6; }
+    .cta-card .btn { width: 100%; justify-content: center; }
+
+    /* =============================================
+       PÁGINA: OTROS SERVICIOS
+    ============================================= */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    .section-servicios-intro {
+      background: var(--navy-deep);
+      padding: 8rem var(--pad-x) 4rem;
+      text-align: center;
+    }
+    .servicios-grid {
+      background: var(--cream);
+      padding: 4rem var(--pad-x);
+    }
+    .servicio-bloque {
+      max-width: var(--max-w);
+      margin: 0 auto 3rem;
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(27,42,74,0.08);
+    }
+    .servicio-header {
+      background: var(--navy);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .servicio-icon {
+      width: 2.5rem; height: 2.5rem;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .servicio-icon svg { width: 1.1rem; height: 1.1rem; fill: var(--gold); }
+    .servicio-header h2 { font-family: var(--serif); font-size: 1.4rem; color: var(--white); font-weight: 400; }
+    .servicio-body { padding: 2rem; }
+    .servicio-lista {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+    .servicio-lista li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(27,42,74,0.05);
+    }
+    .servicio-lista li::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+    .servicio-cta {
+      background: var(--cream);
+      padding: 3rem var(--pad-x);
+      text-align: center;
+      border-top: 1px solid rgba(27,42,74,0.06);
+    }
+    .servicio-cta p { font-size: 1rem; color: var(--text-mid); margin-bottom: 1.5rem; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    .footer { background: var(--navy-deep); padding: 3rem var(--pad-x) 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 2rem;
+    }
+    .footer-brand { font-family: var(--serif); font-size: 1.3rem; color: var(--white); line-height: 1.2; }
+    .footer-tagline { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-family: var(--sans); font-weight: 500; margin-top: 0.25rem; }
+    .footer-contacts { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-contact-label { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .footer-contact-val { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+    .footer-contact-val a { color: rgba(255,255,255,0.75); transition: color 0.2s; }
+    .footer-contact-val a:hover { color: var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { font-size: 0.72rem; color: rgba(255,255,255,0.3); font-style: italic; }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 640px) {
+      .paso-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .cobertura-block { gap: 1.5rem; }
+      .inversion-block { gap: 1.5rem; }
+      .hero { padding: 7rem var(--pad-x) 5rem; }
+      .testimonios-grid { grid-template-columns: 1fr; }
+      .navbar-links { gap: 1rem; }
+    }
+    @media (max-width: 400px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" onclick="showPage('main'); return false;">
+      <video
+        class="navbar-logo-video"
+        src="logo-animado.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="height:3.2rem; width:auto; display:block; object-fit:contain;"
+      ></video>
+    </a>
+    <div class="navbar-links">
+      <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
+      <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
+      <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
     </div>
-            </div>	
+  </nav>
 
-          </div>	
+  <!-- =============================================
+       PÁGINA PRINCIPAL
+  ============================================= -->
+  <div id="page-main" class="page active">
 
-        </div>	
-      </div>	
-    </section>
-    <!-- END section -->
-    <!-- END section -->
-    
-    <section class="pb_section d-none" data-section="contacto" id="seccion-contacto">
-      <div class="container">
-
-        <div class="row justify-content-md-center text-center mb-5">
-          <div class="col-lg-7">
-            <h2 class="mt-0 heading-border-top font-weight-normal">CONTACTO</h2>
-            <p>Te prestamos servicio de representación judicial en las ciudades de BOGOTÁ e IBAGUÉ – Colombia y asesoría jurídica a nivel nacional. </p>
-	     <p><b>¿CÓMO TE PODEMOS AYUDAR?</b></p> 
-          </div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-tag">Para profesionales de la salud</p>
+        <h1 class="hero-title">
+          Recupere sus salarios u honorarios si alguna entidad pública de salud <em>le adeuda.</em>
+        </h1>
+        <p class="hero-sub">
+          Representación judicial especializada para médicos y profesionales de la salud frente a <strong>entidades públicas hospitalarias deudoras.</strong> Ese dinero no está perdido: está pendiente de exigir.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://wa.me/573112231069?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20inicial%20de%20mi%20caso" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Valoración gratuita
+          </a>
+          <a class="btn btn-outline" href="#section-paso">
+            Cómo funciona
+          </a>
         </div>
-
-        
-        <div class="row">
-          <div class="col-md-8 pr-md-5 pr-sm-0 mb-4">
-            <form action="#">
-              <div class="row">
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" class="form-control p-3 rounded-0" id="name">
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="email">Correo</label>
-                    <input type="text" class="form-control p-3 rounded-0" id="email" placeholder="correo@ejemplo.com">
-                  </div>
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea cols="30" rows="10" class="form-control p-3 rounded-0" id="message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Enviar">
-              </div>
-            </form>
-          </div>
-          <div class="col-md-4">
-            <ul class="pb_contact_details_v1">
-              <li>
-		<img src="assets/images/gmail.png" alt="logogmail" class="center">
-                <span class="text-uppercase">Correo</span>
-                <p><a href="mailto:arbelaezruizabogados@gmail.com">arbelaezruizabogados@gmail.com</a></p>
-              </li>
-              <li>
-		<img src="assets/images/wa.png" alt="walogo" class="center">
-                <span class="text-uppercase">Whatsapp directo</span>
-                <p><a href="https://wa.me/573007042711">+573007042711</a></p>
-              </li>
-              <li>
-		<img src="assets/images/ig.png" alt="@arbelaezruizabogados" class="center">
-                <span class="text-uppercase">Instagram</span>
-		<p><a href="https://www.instagram.com/arbelaezruizabogados/">@arbelaezruizabogados</a></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
       </div>
     </section>
-    <!-- END section -->
-	    
-    <section class="pb_section bg-light" data-section="contact" id="section-contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-md">
-            <div class="media pb_media_v2 d-block text-center  mb-3">
-              <div class="media-body">
-		<h2 class="mt-0 heading-border-top font-weight-normal">CONTACTO</h2>
-             <p>Te prestamos servicio de representación judicial en las ciudades de BOGOTÁ e IBAGUÉ – Colombia y asesoría jurídica a nivel nacional. </p>
-	     <p><b>¿CÓMO TE PODEMOS AYUDAR?</b></p> 
-		      <p> </p>
-		      <p> </p>
-		      <img src="assets/images/wa.png" alt="walogo" class="center">
-                <p><a href="https://wa.link/zu7np1">Whatsapp directo +573004558416</a></p>
-		      <p> </p>
-		      <img src="assets/images/gmail.png" alt="logogmail" class="center">
-			<p><a href="mailto:arbelaezruizabogados@gmail.com">arbelaezruizabogados@gmail.com</a></p>
-		           <p> </p>
-		            <img src="assets/images/ig.png" alt="iglogo" class="center">
-		           <p><a href="https://www.instagram.com/arbelaezruizabogados/">Instagram @arbelaezruizabogados</a></p>
 
+    <!-- PROBLEMA -->
+    <section class="section-problema">
+      <div class="container">
+        <p class="eyebrow">El punto de partida</p>
+        <h2 class="section-title">Unos recursos que parecían inexistentes <em>se pueden recuperar — con rendimientos.</em></h2>
+        <p class="body-text">
+          Muchos médicos y profesionales de la salud prestaron sus servicios a hospitales y entidades públicas que, con el tiempo, dejaron de pagar lo pactado. Salarios, honorarios y prestaciones que terminan asumiéndose como <strong>una pérdida definitiva</strong>. En la práctica, rara vez lo son. Mientras la obligación no haya prescrito, ese valor sigue siendo suyo —y la ley contempla mecanismos concretos para exigirlo ante los jueces de la República.
+        </p>
+        <div class="quote-block">
+          <p>No es dinero perdido.<br>Es un derecho <em>pendiente de exigir.</em></p>
+        </div>
+        <div class="cards-3">
+          <div class="card">
+            <p class="card-num">01</p>
+            <h3>Salarios y honorarios no pagados</h3>
+            <p>Valores causados por servicios efectivamente prestados a la entidad y que nunca fueron cancelados.</p>
+          </div>
+          <div class="card">
+            <p class="card-num">02</p>
+            <h3>Prestaciones derivadas del vínculo</h3>
+            <p>Sumas asociadas a la relación contractual o laboral que quedaron sin reconocer ni cubrir.</p>
+          </div>
+          <div class="card">
+            <p class="card-num">03</p>
+            <h3>Intereses por la mora</h3>
+            <p>El simple paso del tiempo genera intereses moratorios y actualización: el monto inicial crece.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="section-video" id="section-video">
+      <div class="container">
+        <p class="eyebrow" style="justify-content:center;">Conózcanos</p>
+        <h2 class="section-title light" style="text-align:center;">Le explicamos cómo <em>trabajamos su caso.</em></h2>
+        <div class="video-wrapper">
+          <!--
+            INSTRUCCIONES PARA AGREGAR EL VIDEO INSTITUCIONAL:
+            1. Cree la carpeta: assets/video/
+            2. Suba su archivo de video (ej: video-firma.mp4)
+            3. Reemplace este bloque por:
+            <video controls poster="assets/images/video-poster.jpg" style="width:100%;display:block;">
+              <source src="assets/video/video-firma.mp4" type="video/mp4">
+            </video>
+          -->
+          <div class="video-placeholder-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <p>Video institucional — próximamente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ NOSOTROS -->
+    <section class="section-nosotros">
+      <div class="container">
+        <p class="eyebrow">Experiencia y respaldo</p>
+        <h2 class="section-title light">Más de una década litigando <em>frente al sector público.</em></h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">+10</div>
+            <div class="stat-label">años de experiencia</div>
+            <p class="stat-desc">Litigando asuntos laborales, administrativos y civiles ante la jurisdicción colombiana.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" style="font-size:2rem;padding-top:0.5rem;">Alto</div>
+            <div class="stat-label">porcentaje de resultados favorables</div>
+            <p class="stat-desc">Una trayectoria construida caso a caso, con diligencia y rigor técnico.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">enfoque especializado</div>
+            <p class="stat-desc">Concentrados en un número limitado de materias que dominamos a profundidad.</p>
+          </div>
+        </div>
+        <div class="cobertura-block">
+          <div>
+            <p class="cobertura-label">Cobertura</p>
+            <p class="cobertura-title">Nacional</p>
+          </div>
+          <p class="cobertura-text">
+            Gracias al avance de la <strong>virtualidad en la administración de justicia</strong>, prestamos nuestros servicios en todo el país y podemos representar sus intereses ante <strong>cualquier jurisdicción del territorio nacional</strong>, sin importar dónde se encuentre.
+          </p>
+        </div>
+        <div class="inversion-block">
+          <p class="inversion-title">Una inversión,<br>no un gasto.</p>
+          <p class="inversion-text">
+            Iniciar la reclamación está pensado para que represente <strong>una baja inversión</strong> frente a lo que puede llegar a recuperarse. Diseñamos esquemas de honorarios flexibles y proporcionales al resultado perseguido. <strong>El detalle se define en su valoración inicial, sin compromiso.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section-testimonios" id="section-testimonios">
+      <div class="container">
+        <p class="eyebrow">Nuestros clientes nos recomiendan</p>
+        <h2 class="section-title">Resultados que <em>hablan por sí solos.</em></h2>
+        <div class="testimonios-grid">
+          <div class="testimonio-card">
+            <p class="testimonio-text">Solicité asesoría de Arbeláez Ruiz abogados para no perder mi dinero. Con sus conocimientos y experiencia fui guiada de la mejor manera y logré que en el menor tiempo posible la empresa acordara el pago de lo que me adeudaban. Lo que para mí era imposible, lo logramos.</p>
+            <p class="testimonio-author">Stella Gutiérrez</p>
+            <p class="testimonio-handle">@sthellagutierrez · Instagram</p>
+          </div>
+          <div class="testimonio-card">
+            <p class="testimonio-text">El abogado tomó posesión de mis derechos y logramos obtener lo que como padre me correspondía. Los he recomendado y han sido igual de efectivos. Solo se obtiene esto con profesionales que entienden el significado de defender los derechos de las personas.</p>
+            <p class="testimonio-author">Hernán Pulido</p>
+            <p class="testimonio-handle">@hernan.pulido.52 · Facebook</p>
+          </div>
+          <div class="testimonio-card">
+            <p class="testimonio-text">Desde que les conferí el poder se destrabó el proceso. Adicionalmente resalto la buena atención: el profesional es claro y directo, colaborador, escucha y sabe guiar. Excelente servicio.</p>
+            <p class="testimonio-author">Diego Bernal</p>
+            <p class="testimonio-handle">@diego.bernal.104 · Facebook</p>
+          </div>
+          <div class="testimonio-card">
+            <p class="testimonio-text">En segunda instancia fui declarado no responsable del delito tributario imputado. Se ordenó el archivo definitivo del expediente. Se manejó el asunto con la sabiduría y ecuanimidad de un profesional con varios años de ejercicio. Auguro un excelente futuro al bufete.</p>
+            <p class="testimonio-author">Mario Cajiao</p>
+            <p class="testimonio-handle">@mario.cajiao.9 · Facebook</p>
+          </div>
+          <div class="testimonio-card">
+            <p class="testimonio-text">Tuvieron profesionalismo, disciplina y orden. El fallo judicial salió a favor de nosotros; gracias a su trabajo y su oportuna intervención no tuvimos que asumir el pago de la suma que injustamente se nos pedía.</p>
+            <p class="testimonio-author">Julián S. Vásquez</p>
+            <p class="testimonio-handle">Representante Legal, Delvas Energy SAS</p>
+          </div>
+          <div class="testimonio-card">
+            <p class="testimonio-text">Nos fueron diseñados contratos comerciales de manera meticulosa y clara, teniendo en cuenta cada una de nuestras necesidades y posibles riesgos legales. Su trabajo nos permitió tener un blindaje jurídico ideal.</p>
+            <p class="testimonio-author">Fernando Machado</p>
+            <p class="testimonio-handle">Representante Legal, GREDS S.A.S</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGUIENTE PASO -->
+    <section class="section-paso" id="section-paso">
+      <div class="container">
+        <p class="eyebrow">El siguiente paso</p>
+        <h2 class="section-title">Conversemos. La valoración inicial de su caso <em>no tiene costo.</em></h2>
+        <p class="body-text">Si cree que una entidad pública de salud quedó debiéndole, escríbanos. En una conversación breve revisamos su situación y le orientamos sobre las posibilidades reales de su caso.</p>
+        <div class="paso-grid">
+          <div class="pasos-list">
+            <div class="paso-item">
+              <div class="paso-num">1</div>
+              <div class="paso-content">
+                <h4>Cuéntenos su caso</h4>
+                <p>Escuchamos qué le adeudan y desde cuándo, sin tecnicismos.</p>
+              </div>
+            </div>
+            <div class="paso-item">
+              <div class="paso-num">2</div>
+              <div class="paso-content">
+                <h4>Revisamos la viabilidad</h4>
+                <p>Analizamos documentos y plazos para identificar la vía adecuada.</p>
+              </div>
+            </div>
+            <div class="paso-item">
+              <div class="paso-num">3</div>
+              <div class="paso-content">
+                <h4>Le explicamos las opciones</h4>
+                <p>Con claridad sobre alcance, tiempos y esquema de honorarios.</p>
               </div>
             </div>
           </div>
+          <div class="cta-card">
+            <p class="cta-card-eyebrow">Agende su consulta</p>
+            <p class="cta-card-title">Escríbanos por WhatsApp</p>
+            <p class="cta-card-phone">311 223 1069</p>
+            <p class="cta-card-sub">Indicativo +57 · Colombia<br>Atención de lunes a viernes</p>
+            <a class="btn btn-gold" href="https://wa.me/573112231069?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20inicial%20de%20mi%20caso" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Escribir ahora
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <!-- END section -->
 
-    <footer class="pb_footer bg-light" role="contentinfo">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
+    <!-- FOOTER PRINCIPAL -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <p class="footer-brand">Arbeláez Ruiz<br>Abogados</p>
+            <p class="footer-tagline">Estrategias jurídicas a tu alcance</p>
+          </div>
+          <div class="footer-contacts">
+            <div>
+              <p class="footer-contact-label">WhatsApp</p>
+              <p class="footer-contact-val">
+                <a href="https://wa.me/573112231069" target="_blank">+57 311 223 1069</a><br>
+                <a href="https://wa.me/573004558416" target="_blank">+57 300 455 8416</a>
+              </p>
+            </div>
+            <div>
+              <p class="footer-contact-label">Correo</p>
+              <p class="footer-contact-val">
+                <a href="mailto:arbelaezruizabogados@gmail.com">arbelaezruizabogados@gmail.com</a>
+              </p>
+            </div>
+            <div>
+              <p class="footer-contact-label">Instagram</p>
+              <p class="footer-contact-val">
+                <a href="https://www.instagram.com/arbelaezruizabogados/" target="_blank">@arbelaezruizabogados</a>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col text-center">
-            <p class="pb_font-14">&copy; 2019. Designed by conecta.com<a rel="nofollow" href="" target="_blank"></a></p>
-          </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2023 Arbeláez Ruiz Abogados · Colombia</p>
+          <p class="footer-legal">Asesoría y representación judicial · Colombia</p>
         </div>
       </div>
     </footer>
-    
-    <!-- loader -->
-    <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#FDA04F"/></svg></div>
 
+  </div><!-- /page-main -->
 
-    <script src="assets/js/jquery.min.js"></script>
-    
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
+  <!-- =============================================
+       PÁGINA: OTROS SERVICIOS
+  ============================================= -->
+  <div id="page-servicios" class="page">
 
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <section class="section-servicios-intro">
+      <div class="container">
+        <p class="eyebrow" style="justify-content:center;">Nuestras áreas de práctica</p>
+        <h1 class="section-title light" style="text-align:center;">Servicios jurídicos <em>integrales.</em></h1>
+        <p class="body-text light" style="margin:0 auto; text-align:center;">Además de nuestra especialidad en acreencias laborales del sector salud, acompañamos a nuestros clientes en diversas áreas del derecho colombiano.</p>
+      </div>
+    </section>
 
-    <script src="assets/js/main.js"></script>
-	</body>
+    <div class="servicios-grid">
+
+      <!-- Derecho Laboral -->
+      <div class="servicio-bloque">
+        <div class="servicio-header">
+          <div class="servicio-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 12H4V9h16v10zM12 3H8v2h8V3h-4z"/></svg>
+          </div>
+          <h2>Derecho Laboral</h2>
+        </div>
+        <div class="servicio-body">
+          <ul class="servicio-lista">
+            <li>Asesoría legal en materia de derechos laborales</li>
+            <li>Conciliaciones y demandas laborales contra entidades públicas y privadas</li>
+            <li>Reclamación de salarios, prestaciones e indemnizaciones</li>
+            <li>Contratos laborales y de prestación de servicios</li>
+            <li>Liquidaciones laborales y reliquidaciones</li>
+            <li>Acoso laboral y desmejora de condiciones de trabajo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Derecho Civil -->
+      <div class="servicio-bloque">
+        <div class="servicio-header">
+          <div class="servicio-icon">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          </div>
+          <h2>Derecho Civil</h2>
+        </div>
+        <div class="servicio-body">
+          <ul class="servicio-lista">
+            <li>Litigios en diversas áreas del Derecho Civil</li>
+            <li>Contratos civiles y responsabilidad contractual</li>
+            <li>Procesos ejecutivos y cobro de obligaciones</li>
+            <li>Restitución de inmueble arrendado</li>
+            <li>Pertenencia por posesión</li>
+            <li>Arrendamiento de vivienda urbana</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trámites Notariales y Familia -->
+      <div class="servicio-bloque">
+        <div class="servicio-header">
+          <div class="servicio-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h2>Trámites Notariales y Derecho de Familia</h2>
+        </div>
+        <div class="servicio-body">
+          <ul class="servicio-lista">
+            <li>Sucesiones notariales y judiciales</li>
+            <li>Divorcios</li>
+            <li>Fiducia Civil</li>
+            <li>Contratos civiles y comerciales</li>
+            <li>Disolución y liquidación de sociedad patrimonial</li>
+            <li>Conciliaciones de familia</li>
+            <li>Testamentos</li>
+            <li>Alimentos y régimen de visitas</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Derecho Comercial -->
+      <div class="servicio-bloque">
+        <div class="servicio-header">
+          <div class="servicio-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          </div>
+          <h2>Derecho Comercial</h2>
+        </div>
+        <div class="servicio-body">
+          <ul class="servicio-lista">
+            <li>Asesoría para la revisión y celebración de contratos comerciales</li>
+            <li>Contratos de compraventa, suministro y distribución</li>
+            <li>Contratos de prestación de servicios empresariales</li>
+            <li>Responsabilidad civil contractual y extracontractual</li>
+            <li>Blindaje jurídico para empresas y emprendedores</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Derecho del Consumidor -->
+      <div class="servicio-bloque">
+        <div class="servicio-header">
+          <div class="servicio-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg>
+          </div>
+          <h2>Derecho del Consumidor</h2>
+        </div>
+        <div class="servicio-body">
+          <ul class="servicio-lista">
+            <li>Reclamación directa a productores de bienes o prestadores de servicios</li>
+            <li>Acción de protección al consumidor ante Superintendencias</li>
+            <li>Protección al consumidor financiero y de telecomunicaciones</li>
+            <li>Fraudes bancarios y defensa del consumidor digital</li>
+            <li>Incumplimiento de garantías y calidad de productos</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="servicio-cta">
+      <p>¿Tiene una consulta en alguna de estas áreas? Contáctenos, la primera valoración no tiene costo.</p>
+      <a class="btn btn-gold" href="https://wa.me/573112231069?text=Hola%2C%20quiero%20consultar%20sobre%20un%20servicio%20jur%C3%ADdico" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Consultar por WhatsApp
+      </a>
+    </div>
+
+    <!-- FOOTER SERVICIOS -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <p class="footer-brand">Arbeláez Ruiz<br>Abogados</p>
+            <p class="footer-tagline">Estrategias jurídicas a tu alcance</p>
+          </div>
+          <div class="footer-contacts">
+            <div>
+              <p class="footer-contact-label">WhatsApp</p>
+              <p class="footer-contact-val">
+                <a href="https://wa.me/573112231069" target="_blank">+57 311 223 1069</a><br>
+                <a href="https://wa.me/573004558416" target="_blank">+57 300 455 8416</a>
+              </p>
+            </div>
+            <div>
+              <p class="footer-contact-label">Correo</p>
+              <p class="footer-contact-val">
+                <a href="mailto:arbelaezruizabogados@gmail.com">arbelaezruizabogados@gmail.com</a>
+              </p>
+            </div>
+            <div>
+              <p class="footer-contact-label">Instagram</p>
+              <p class="footer-contact-val">
+                <a href="https://www.instagram.com/arbelaezruizabogados/" target="_blank">@arbelaezruizabogados</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2023 Arbeláez Ruiz Abogados · Colombia</p>
+          <p class="footer-legal">Asesoría y representación judicial · Colombia</p>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-servicios -->
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-float" href="https://wa.me/573112231069?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20inicial%20de%20mi%20caso" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    function showPage(page) {
+      document.getElementById('page-main').classList.remove('active');
+      document.getElementById('page-servicios').classList.remove('active');
+      document.getElementById('page-' + page).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Resaltar enlace activo
+      document.querySelectorAll('.navbar-link').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      if (page === 'servicios') {
+        document.getElementById('nav-servicios-link').classList.add('active');
+      }
+    }
+  </script>
+
+</body>
 </html>
