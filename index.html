@@ -144,22 +144,29 @@
 
     .site-header .header-logo .container {
       width: 100%;
-      max-width: var(--max-w);
+      max-width: 720px;
       margin: 0 auto;
       padding-left: var(--pad-x);
       padding-right: var(--pad-x);
+      display: flex;
+      justify-content: center;
     }
 
     .site-header .header-logo a {
       display: block;
       width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     .header-logo .navbar-logo-video {
       width: 100%;
+      max-width: 720px;
+      min-height: 7rem;
       height: auto;
       display: block;
       object-fit: contain;
+      margin: 0 auto;
     }
 
     .navbar {
@@ -561,6 +568,11 @@
       .navbar-links { gap: 1rem; }
       .site-header {
         padding: 0 0 0.5rem;
+      }
+      .site-header .header-logo .container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
       }
       .site-header .header-logo a,
       .header-logo .navbar-logo-video {
