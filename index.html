@@ -144,7 +144,7 @@
 
     .site-header .header-logo .container {
       width: 100%;
-      max-width: 720px;
+      max-width: var(--max-w);
       margin: 0 auto;
       padding-left: var(--pad-x);
       padding-right: var(--pad-x);
@@ -155,14 +155,14 @@
     .site-header .header-logo a {
       display: block;
       width: 100%;
-      max-width: 720px;
+      max-width: 620px;
       margin: 0 auto;
     }
 
     .header-logo .navbar-logo-video {
       width: 100%;
-      max-width: 720px;
-      min-height: 7rem;
+      max-width: 620px;
+      min-height: 6.5rem;
       height: auto;
       display: block;
       object-fit: contain;
@@ -175,7 +175,15 @@
       align-items: center;
       gap: 1.75rem;
       width: 100%;
+    }
+
+    .navbar .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
       padding: 0 var(--pad-x);
+      display: flex;
+      justify-content: flex-end;
     }
 
     .navbar-links {
@@ -580,8 +588,18 @@
         max-width: 100%;
       }
       .header-logo .navbar-logo-video {
-        height: 6rem;
+        height: 8rem;
         object-fit: contain;
+      }
+      .navbar .container {
+        justify-content: center;
+      }
+      .navbar-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .navbar-links .navbar-link {
+        font-size: 0.9rem;
       }
     }
     @media (max-width: 400px) {
@@ -608,10 +626,12 @@
       </div>
     </div>
     <nav class="navbar">
-      <div class="navbar-links">
-        <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
-        <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
-        <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
+      <div class="container">
+        <div class="navbar-links">
+          <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
+          <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
+          <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
+        </div>
       </div>
     </nav>
   </header>
