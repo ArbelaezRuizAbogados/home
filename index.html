@@ -524,6 +524,9 @@
       .hero { padding: 7rem var(--pad-x) 5rem; }
       .testimonios-grid { grid-template-columns: 1fr; }
       .navbar-links { gap: 1rem; }
+      /* Ajustes para logo en pantallas pequeñas */
+      .site-header { display:flex; align-items:center; justify-content:center; }
+      .navbar-logo-video { width: auto; max-height: 45vh; }
     }
     @media (max-width: 400px) {
       .stats-grid { grid-template-columns: 1fr; }
@@ -982,26 +985,6 @@
         document.getElementById('nav-servicios-link').classList.add('active');
       }
     }
-  </script>
-
-  <!-- DEBUG: marcar videos, header y navbar para diagnosticar superposición -->
-  <script>
-    (function(){
-      window.addEventListener('load', function(){
-        console.log('DEBUG: location=', location.href);
-        var vids = document.querySelectorAll('video');
-        console.log('DEBUG: videos found=', vids.length, vids);
-        vids.forEach(function(v,i){
-          var r = v.getBoundingClientRect();
-          console.log('video', i, 'rect=', r);
-          v.style.outline = '3px solid rgba(255,0,0,0.5)';
-        });
-        var header = document.querySelector('.site-header');
-        var nav = document.querySelector('.navbar');
-        if(header){ console.log('DEBUG: header rect=', header.getBoundingClientRect()); header.style.outline='2px dashed yellow'; }
-        if(nav){ console.log('DEBUG: nav rect=', nav.getBoundingClientRect()); nav.style.outline='2px dashed lime'; }
-      });
-    })();
   </script>
 
 </body>
