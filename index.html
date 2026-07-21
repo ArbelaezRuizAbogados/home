@@ -127,30 +127,40 @@
        NAVBAR
     ============================================= */
     .navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
+      position: relative; /* ahora en flujo normal debajo del header */
       z-index: 100;
       background: rgba(17, 29, 51, 0.96);
       backdrop-filter: blur(8px);
-      padding: 0.5rem var(--pad-x);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+      padding: 0.5rem 0; /* padding vertical solo */
+      display: block;
+    }
+
+    .site-header {
+      width: 100%;
+      background: var(--navy-deep);
+      overflow: hidden;
+      display: block;
     }
 
     /* Logo animado en navbar */
     .navbar-logo-video {
-      height: 3.2rem;
-      width: auto;
+      width: 100%; /* ocupar todo el ancho disponible */
+      height: auto;
+      max-height: 18rem; /* mayor altura para pantallas grandes */
       display: block;
-      object-fit: contain;
+      object-fit: contain; /* mostrar el logo completo sin recorte */
     }
+
+    .navbar-logo-link { display: block; width: 100%; overflow: hidden; }
 
     .navbar-links {
       display: flex;
       align-items: center;
+      justify-content: center; /* centrar los enlaces bajo el logo */
       gap: 1.75rem;
+      width: 100%;
+      padding: 0.25rem var(--pad-x); /* mantener enlaces alineados con el contenido */
+      box-sizing: border-box;
     }
     .navbar-link {
       font-size: 0.72rem;
@@ -522,24 +532,28 @@
 </head>
 <body>
 
+  <!-- HEADER: logo a ancho completo -->
+  <header class="site-header">
+    <a href="#" onclick="showPage('main'); return false;" class="navbar-logo-link">
+      <video
+        class="navbar-logo-video"
+        src="logo-animado.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </a>
+  </header>
+
   <!-- NAVBAR -->
-<nav class="navbar">
-  <a href="#" onclick="showPage('main'); return false;" style="flex:1;">
-    <video
-      src="logo-animado.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-      style="height:4.5rem; width:100%; display:block; object-fit:contain;"
-    ></video>
-  </a>
-  <div class="navbar-links">
-    <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
-    <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
-    <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="container navbar-links">
+      <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
+      <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
+      <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
+    </div>
+  </nav>
 
   <!-- =============================================
        PÁGINA PRINCIPAL
@@ -968,6 +982,26 @@
         document.getElementById('nav-servicios-link').classList.add('active');
       }
     }
+  </script>
+
+  <!-- DEBUG: marcar videos, header y navbar para diagnosticar superposición -->
+  <script>
+    (function(){
+      window.addEventListener('load', function(){
+        console.log('DEBUG: location=', location.href);
+        var vids = document.querySelectorAll('video');
+        console.log('DEBUG: videos found=', vids.length, vids);
+        vids.forEach(function(v,i){
+          var r = v.getBoundingClientRect();
+          console.log('video', i, 'rect=', r);
+          v.style.outline = '3px solid rgba(255,0,0,0.5)';
+        });
+        var header = document.querySelector('.site-header');
+        var nav = document.querySelector('.navbar');
+        if(header){ console.log('DEBUG: header rect=', header.getBoundingClientRect()); header.style.outline='2px dashed yellow'; }
+        if(nav){ console.log('DEBUG: nav rect=', nav.getBoundingClientRect()); nav.style.outline='2px dashed lime'; }
+      });
+    })();
   </script>
 
 </body>
