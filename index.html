@@ -995,6 +995,14 @@
   </a>
 
   <script>
+    const logoVideo = document.querySelector('.navbar-logo-video');
+    if (logoVideo) {
+      logoVideo.playbackRate = 0.75;
+      logoVideo.addEventListener('loadedmetadata', function() {
+        logoVideo.playbackRate = 0.75;
+      });
+    }
+
     function showPage(page) {
       document.getElementById('page-main').classList.remove('active');
       document.getElementById('page-servicios').classList.remove('active');
