@@ -240,6 +240,16 @@
       top: 0.5rem; left: 1.5rem;
       line-height: 1;
     }
+    .quote-block::after {
+      content: '\201D';
+      font-family: var(--serif);
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: 0.4;
+      position: absolute;
+      right: 1.5rem; bottom: 0.6rem;
+      line-height: 1;
+    }
     .quote-block p {
       font-family: var(--serif);
       font-size: clamp(1.4rem, 3vw, 1.9rem);
@@ -366,6 +376,17 @@
       position: absolute;
       top: 0.5rem; left: 1rem;
       line-height: 1;
+    }
+    .testimonio-card::after {
+      content: '\201D';
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      color: var(--gold);
+      opacity: 0.25;
+      position: absolute;
+      right: 1rem; bottom: 0.75rem;
+      line-height: 1;
+      z-index: 1;
     }
     .testimonio-text { font-family: var(--serif); font-size: 0.98rem; font-style: italic; color: var(--text-mid); line-height: 1.7; margin-bottom: 1.25rem; padding-top: 1rem; }
     .testimonio-author { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
@@ -551,7 +572,7 @@
       <div class="hero-inner">
         <p class="hero-tag">Para profesionales de la salud</p>
         <h1 class="hero-title">
-          Recupere sus salarios u honorarios si alguna entidad pública de salud <em>le adeuda.</em>
+          Recupere sus honorarios y salarios si alguna entidad pública de salud <em>le adeuda.</em>
         </h1>
         <p class="hero-sub">
           Representación judicial especializada para médicos y profesionales de la salud frente a <strong>entidades públicas hospitalarias deudoras.</strong> Ese dinero no está perdido: está pendiente de exigir.
@@ -955,6 +976,14 @@
   </a>
 
   <script>
+    const logoVideo = document.querySelector('.navbar-logo-video');
+    if (logoVideo) {
+      logoVideo.playbackRate = 0.56;
+      logoVideo.addEventListener('loadedmetadata', function() {
+        logoVideo.playbackRate = 0.56;
+      });
+    }
+
     function showPage(page) {
       document.getElementById('page-main').classList.remove('active');
       document.getElementById('page-servicios').classList.remove('active');
