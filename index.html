@@ -144,16 +144,21 @@
       overflow: hidden;
     }
 
+    .site-header .header-logo .container {
+      width: 100%;
+      max-width: var(--max-w);
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto;
+    }
+
     .site-header .header-logo a {
       display: block;
       width: 100%;
-      max-width: 560px;
-      margin: 0 auto;
     }
 
     .header-logo .navbar-logo-video {
       width: 100%;
-      max-width: 560px;
       height: auto;
       display: block;
       object-fit: contain;
@@ -579,16 +584,18 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-logo">
-      <a href="#" onclick="showPage('main'); return false;">
-        <video
-          class="navbar-logo-video"
-          src="logo-animado.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
-      </a>
+      <div class="container">
+        <a href="#" onclick="showPage('main'); return false;">
+          <video
+            class="navbar-logo-video"
+            src="logo-animado.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </a>
+      </div>
     </div>
     <nav class="navbar">
       <div class="navbar-links">
