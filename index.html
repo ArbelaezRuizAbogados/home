@@ -139,7 +139,12 @@
     }
 
     .site-header .header-logo {
-      width: 100%;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
 
     .site-header .header-logo a {
@@ -149,7 +154,7 @@
 
     .header-logo .navbar-logo-video {
       width: 100%;
-      max-height: 6rem;
+      max-height: 8rem;
       height: auto;
       display: block;
       object-fit: contain;
