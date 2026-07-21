@@ -127,48 +127,30 @@
        NAVBAR
     ============================================= */
     .navbar {
-      position: relative; /* ahora en flujo normal debajo del header */
+      position: fixed;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       background: rgba(17, 29, 51, 0.96);
       backdrop-filter: blur(8px);
-      padding: 0.5rem 0; /* padding vertical solo */
-      display: block;
-    }
-
-    .site-header {
-      width: 100%;
-      background: var(--navy-deep);
-      overflow: hidden;
-      display: block;
+      padding: 0.5rem var(--pad-x);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
     /* Logo animado en navbar */
     .navbar-logo-video {
-      width: 100%; /* por defecto ocupa el ancho del contenedor */
-      height: auto;
-      max-height: 18rem; /* mayor altura para pantallas grandes */
+      height: 3.2rem;
+      width: auto;
       display: block;
-      object-fit: contain; /* mostrar el logo completo sin recorte */
-      max-width: none;
-    }
-
-    /* Hacer que el enlace que contiene el video se extienda full-bleed */
-    .navbar-logo-link {
-      display: block;
-      overflow: hidden;
-      width: 100vw;
-      max-width: none;
-      margin-left: calc(50% - 50vw);
+      object-fit: contain;
     }
 
     .navbar-links {
       display: flex;
       align-items: center;
-      justify-content: center; /* centrar los enlaces bajo el logo */
       gap: 1.75rem;
-      width: 100%;
-      padding: 0.25rem var(--pad-x); /* mantener enlaces alineados con el contenido */
-      box-sizing: border-box;
     }
     .navbar-link {
       font-size: 0.72rem;
@@ -256,16 +238,6 @@
       opacity: 0.4;
       position: absolute;
       top: 0.5rem; left: 1.5rem;
-      line-height: 1;
-    }
-    .quote-block::after {
-      content: '\201D';
-      font-family: var(--serif);
-      font-size: 5rem;
-      color: var(--gold);
-      opacity: 0.4;
-      position: absolute;
-      right: 1.5rem; bottom: 0.6rem;
       line-height: 1;
     }
     .quote-block p {
@@ -394,17 +366,6 @@
       position: absolute;
       top: 0.5rem; left: 1rem;
       line-height: 1;
-    }
-    .testimonio-card::after {
-      content: '\201D';
-      font-family: var(--serif);
-      font-size: 3.5rem;
-      color: var(--gold);
-      opacity: 0.4;
-      position: absolute;
-      right: 1rem; bottom: 0.75rem;
-      line-height: 1;
-      z-index: 1;
     }
     .testimonio-text { font-family: var(--serif); font-size: 0.98rem; font-style: italic; color: var(--text-mid); line-height: 1.7; margin-bottom: 1.25rem; padding-top: 1rem; }
     .testimonio-author { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
@@ -553,13 +514,7 @@
       .hero { padding: 7rem var(--pad-x) 5rem; }
       .testimonios-grid { grid-template-columns: 1fr; }
       .navbar-links { gap: 1rem; }
-      /* Ajustes para logo en pantallas pequeñas */
-      .site-header { display:flex; align-items:center; justify-content:center; }
-      .navbar-logo-video { width: auto; max-height: 45vh; margin: 0 auto; max-width: 100%; }
     }
-
-    /* Evitar desbordes horizontales inesperados */
-    html, body { overflow-x: hidden; }
     @media (max-width: 400px) {
       .stats-grid { grid-template-columns: 1fr; }
     }
@@ -567,30 +522,24 @@
 </head>
 <body>
 
-  <!-- HEADER: logo a ancho completo -->
-  <header class="site-header">
-    <div class="container">
-      <a href="#" onclick="showPage('main'); return false;" class="navbar-logo-link">
-        <video
-          class="navbar-logo-video"
-          src="logo-animado.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
-      </a>
-    </div>
-  </header>
-
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container navbar-links">
-      <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
-      <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
-      <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
-    </div>
-  </nav>
+<nav class="navbar">
+  <a href="#" onclick="showPage('main'); return false;" style="flex:1;">
+    <video
+      src="logo-animado.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      style="height:4.5rem; width:100%; display:block; object-fit:contain;"
+    ></video>
+  </a>
+  <div class="navbar-links">
+    <a class="navbar-link" href="#section-testimonios" onclick="showPage('main')">Testimonios</a>
+    <a class="navbar-link" href="#section-paso" onclick="showPage('main')">Contacto</a>
+    <a class="navbar-link" href="#" onclick="showPage('servicios'); return false;" id="nav-servicios-link">Otros Servicios</a>
+  </div>
+</nav>
 
   <!-- =============================================
        PÁGINA PRINCIPAL
@@ -602,7 +551,7 @@
       <div class="hero-inner">
         <p class="hero-tag">Para profesionales de la salud</p>
         <h1 class="hero-title">
-          Recupere sus honorarios y salarios si alguna entidad pública de salud <em>le adeuda.</em>
+          Recupere sus salarios u honorarios si alguna entidad pública de salud <em>le adeuda.</em>
         </h1>
         <p class="hero-sub">
           Representación judicial especializada para médicos y profesionales de la salud frente a <strong>entidades públicas hospitalarias deudoras.</strong> Ese dinero no está perdido: está pendiente de exigir.
@@ -662,7 +611,7 @@
             2. Suba su archivo de video (ej: video-firma.mp4)
             3. Reemplace este bloque por:
             <video controls poster="assets/images/video-poster.jpg" style="width:100%;display:block;">
-              <source src="assets/video/video-firma.mp4" type="video/mp4">
+              <source src="assets/video/video-institucional.mov" type="video/quicktime">
             </video>
           -->
           <div class="video-placeholder-icon">
@@ -1006,14 +955,6 @@
   </a>
 
   <script>
-    const logoVideo = document.querySelector('.navbar-logo-video');
-    if (logoVideo) {
-      logoVideo.playbackRate = 0.56;
-      logoVideo.addEventListener('loadedmetadata', function() {
-        logoVideo.playbackRate = 0.56;
-      });
-    }
-
     function showPage(page) {
       document.getElementById('page-main').classList.remove('active');
       document.getElementById('page-servicios').classList.remove('active');
@@ -1031,4 +972,3 @@
 
 </body>
 </html>
-
