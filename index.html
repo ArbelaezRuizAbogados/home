@@ -147,6 +147,7 @@
       width: 100%; /* ocupar todo el ancho disponible */
       height: auto;
       max-height: 18rem; /* mayor altura para pantallas grandes */
+      margin: 0 auto; /* centrar si no llena todo el ancho */
       display: block;
       object-fit: contain; /* mostrar el logo completo sin recorte */
     }
@@ -526,8 +527,11 @@
       .navbar-links { gap: 1rem; }
       /* Ajustes para logo en pantallas pequeñas */
       .site-header { display:flex; align-items:center; justify-content:center; }
-      .navbar-logo-video { width: auto; max-height: 45vh; }
+      .navbar-logo-video { width: auto; max-height: 45vh; margin: 0 auto; max-width: 100%; }
     }
+
+    /* Evitar desbordes horizontales inesperados */
+    html, body { overflow-x: hidden; }
     @media (max-width: 400px) {
       .stats-grid { grid-template-columns: 1fr; }
     }
