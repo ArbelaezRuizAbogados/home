@@ -144,15 +144,22 @@
 
     /* Logo animado en navbar */
     .navbar-logo-video {
-      width: 100%; /* ocupar todo el ancho disponible */
+      width: 100%; /* por defecto ocupa el ancho del contenedor */
       height: auto;
       max-height: 18rem; /* mayor altura para pantallas grandes */
-      margin: 0 auto; /* centrar si no llena todo el ancho */
       display: block;
       object-fit: contain; /* mostrar el logo completo sin recorte */
+      max-width: none;
     }
 
-    .navbar-logo-link { display: block; width: 100%; overflow: hidden; }
+    /* Hacer que el enlace que contiene el video se extienda full-bleed */
+    .navbar-logo-link {
+      display: block;
+      overflow: hidden;
+      width: 100vw;
+      max-width: none;
+      margin-left: calc(50% - 50vw);
+    }
 
     .navbar-links {
       display: flex;
@@ -541,16 +548,18 @@
 
   <!-- HEADER: logo a ancho completo -->
   <header class="site-header">
-    <a href="#" onclick="showPage('main'); return false;" class="navbar-logo-link">
-      <video
-        class="navbar-logo-video"
-        src="logo-animado.mp4"
-        autoplay
-        loop
-        muted
-        playsinline
-      ></video>
-    </a>
+    <div class="container">
+      <a href="#" onclick="showPage('main'); return false;" class="navbar-logo-link">
+        <video
+          class="navbar-logo-video"
+          src="logo-animado.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+      </a>
+    </div>
   </header>
 
   <!-- NAVBAR -->
