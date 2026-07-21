@@ -127,8 +127,6 @@
        NAVBAR
     ============================================= */
     .site-header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
       width: 100%;
       z-index: 100;
       background: rgba(17, 29, 51, 0.96);
@@ -147,9 +145,9 @@
     .site-header .header-logo .container {
       width: 100%;
       max-width: var(--max-w);
-      padding-left: 0;
-      padding-right: 0;
       margin: 0 auto;
+      padding-left: var(--pad-x);
+      padding-right: var(--pad-x);
     }
 
     .site-header .header-logo a {
