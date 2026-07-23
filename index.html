@@ -642,7 +642,8 @@
         min-width: 0;
         height: auto;
         aspect-ratio: 4 / 3;
-        object-fit: contain;
+        object-fit: cover;
+        object-position: center;
         margin: 0 auto;
       }
 
@@ -695,6 +696,9 @@
             loop
             muted
             playsinline
+            webkit-playsinline="true"
+            preload="auto"
+            disablePictureInPicture
           ></video>
         </a>
       </div>
@@ -1129,6 +1133,33 @@
       logoVideo.playbackRate = 0.56;
       logoVideo.addEventListener('loadedmetadata', function() {
         logoVideo.playbackRate = 0.56;
+      });
+
+      // Algunos navegadores (in-app de Instagram/Facebook, Samsung Internet, Safari
+      // con políticas estrictas) bloquean el autoplay aunque el video sea muted y
+      // playsinline, y muestran un ícono de reproducción. Forzamos muted por JS y
+      // reintentamos en la primera interacción del usuario si el autoplay falla.
+      logoVideo.muted = true;
+      logoVideo.defaultMuted = true;
+
+      function tryPlayLogoVideo() {
+        const playPromise = logoVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function() {
+            function resumePlay() {
+              logoVideo.muted = true;
+              logoVideo.play().catch(function() {});
+            }
+            document.addEventListener('touchstart', resumePlay, { once: true, passive: true });
+            document.addEventListener('click', resumePlay, { once: true });
+          });
+        }
+      }
+      tryPlayLogoVideo();
+      document.addEventListener('visibilitychange', function() {
+        if (!document.hidden && logoVideo.paused) {
+          tryPlayLogoVideo();
+        }
       });
     }
 
